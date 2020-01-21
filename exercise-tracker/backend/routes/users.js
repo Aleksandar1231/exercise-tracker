@@ -15,7 +15,7 @@ router.route('/').get((req, res) => {
 
 //handle post requets
 router.route('/add').post((req, res) => {
-
+    
     const username = req.body.username;
 
     const newUser = new User({username});

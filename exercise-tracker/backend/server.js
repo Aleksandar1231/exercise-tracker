@@ -6,10 +6,11 @@
  const mongoose = require('mongoose');
 
  //dotenv framework, save env vars in file
- require('dotenv').config();
+ require('dotenv').config(); 
 
- //create express server
+ //create express server 
  const app = express();
+ //assign port
  const port = process.env.PORT || 5000;
 
  //cors middleware
