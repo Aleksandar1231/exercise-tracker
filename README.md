@@ -1,9 +1,13 @@
 # exercise-tracker
 
-To run on local machine, open command shell:
+To run on local machine, open 2 command shell:
 
-  Start the app:
+  On first command shell, start the app:
     $npm start
+    
+  On second command shell, start the server:
+    $cd backend
+    $nodemon server
   
 
   
