@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
+import axios from 'axios';
 
 export default class CreateUsers extends Component{
     
@@ -15,13 +16,6 @@ export default class CreateUsers extends Component{
         }
     }
 
-    componentDidMount() {
-        this.setState({
-            users: ["root"],
-            username: 'root'
-        });
-    }
-    
     onChangeUsername(e) {
         this.setState({
             username: e.target.value
@@ -36,6 +30,9 @@ export default class CreateUsers extends Component{
         }
 
         console.log(user);
+
+        axios.post('http://localhost:5000/users/add', user)
+        .then((res)=>console.log(res.data));
 
         //reset back to blank
         this.setState({
